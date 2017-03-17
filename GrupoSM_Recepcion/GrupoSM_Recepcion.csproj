@@ -1,0 +1,1339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CDF1DE5D-B426-48CB-A3D0-607A6D0EA5FA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GrupoSM_Recepcion</RootNamespace>
+    <AssemblyName>GrupoSM_Recepcion</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>\\SERVIDOR\archivosservidor\Archivos TI\Sistema\Monitor Don Sergio\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BO\DS_MasterDataset.cs">
+      <DependentUpon>DS_MasterDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BO\DS_MasterDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_MasterDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\AcabadosDAO.cs" />
+    <Compile Include="DAO\AviosDAO.cs" />
+    <Compile Include="DAO\ClientesDAO.cs" />
+    <Compile Include="DAO\EmpleadosDAO.cs" />
+    <Compile Include="DAO\Ficha_tecnicaDAO.cs" />
+    <Compile Include="DAO\MaquiladoresDAO.cs" />
+    <Compile Include="DAO\Oden_ProduccionDAO.cs" />
+    <Compile Include="DAO\PiezasDAO.cs" />
+    <Compile Include="DAO\PlantillasDAO.cs" />
+    <Compile Include="DAO\ProcesosDAO.cs" />
+    <Compile Include="DAO\ProduccionDAO.cs" />
+    <Compile Include="DAO\ProveedoresDAO.cs" />
+    <Compile Include="DAO\SalidasMaquilaDAO.cs" />
+    <Compile Include="DAO\SolicitudesDAO.cs" />
+    <Compile Include="DAO\TelasDAO.cs" />
+    <Compile Include="GUI\Bodega\AsignacionEmpleadosCostura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\AsignacionEmpleadosCostura.Designer.cs">
+      <DependentUpon>AsignacionEmpleadosCostura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Bodega\Avios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\Avios.Designer.cs">
+      <DependentUpon>Avios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Bodega\AviosColorGrupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\AviosColorGrupos.Designer.cs">
+      <DependentUpon>AviosColorGrupos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Bodega\AviosControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\AviosControl.Designer.cs">
+      <DependentUpon>AviosControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Bodega\Avios_Asignacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\Avios_Asignacion.Designer.cs">
+      <DependentUpon>Avios_Asignacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Bodega\Avios_captura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\Avios_captura.Designer.cs">
+      <DependentUpon>Avios_captura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Bodega\Avios_Entrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\Avios_Entrada.Designer.cs">
+      <DependentUpon>Avios_Entrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Bodega\Cliente_seleccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\Cliente_seleccion.Designer.cs">
+      <DependentUpon>Cliente_seleccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Bodega\Entrada_maquila.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\Entrada_maquila.Designer.cs">
+      <DependentUpon>Entrada_maquila.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Bodega\Hoja_Acabados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\Hoja_Acabados.Designer.cs">
+      <DependentUpon>Hoja_Acabados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Bodega\Hoja_Corte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\Hoja_Corte.Designer.cs">
+      <DependentUpon>Hoja_Corte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Bodega\Maquiladores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\Maquiladores.Designer.cs">
+      <DependentUpon>Maquiladores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Bodega\Maquiladores_control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\Maquiladores_control.Designer.cs">
+      <DependentUpon>Maquiladores_control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Bodega\Ordenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\Ordenes.Designer.cs">
+      <DependentUpon>Ordenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Bodega\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Bodega\Proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\Proveedores.Designer.cs">
+      <DependentUpon>Proveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Bodega\ProveedoresControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\ProveedoresControl.Designer.cs">
+      <DependentUpon>ProveedoresControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Bodega\Proveedor_Seleccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\Proveedor_Seleccion.Designer.cs">
+      <DependentUpon>Proveedor_Seleccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Bodega\Salida_maquila.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\Salida_maquila.Designer.cs">
+      <DependentUpon>Salida_maquila.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Bodega\SeleccionarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\SeleccionarEmpleado.Designer.cs">
+      <DependentUpon>SeleccionarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Bodega\Seleccionar_entrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\Seleccionar_entrada.Designer.cs">
+      <DependentUpon>Seleccionar_entrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Bodega\Seleccionar_Maquilador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\Seleccionar_Maquilador.Designer.cs">
+      <DependentUpon>Seleccionar_Maquilador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Bodega\Seleccionar_Orden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\Seleccionar_Orden.Designer.cs">
+      <DependentUpon>Seleccionar_Orden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Bodega\Seleccionar_salida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\Seleccionar_salida.Designer.cs">
+      <DependentUpon>Seleccionar_salida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Bodega\Seleccion_Entregas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\Seleccion_Entregas.Designer.cs">
+      <DependentUpon>Seleccion_Entregas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Bodega\Telas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\Telas.Designer.cs">
+      <DependentUpon>Telas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Bodega\TelasControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\TelasControl.Designer.cs">
+      <DependentUpon>TelasControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Bodega\Telas_Captura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\Telas_Captura.Designer.cs">
+      <DependentUpon>Telas_Captura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Bodega\Telas_Entrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\Telas_Entrada.Designer.cs">
+      <DependentUpon>Telas_Entrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Bodega\Telas_orden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\Telas_orden.Designer.cs">
+      <DependentUpon>Telas_orden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Bodega\Tela_Seleccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Bodega\Tela_Seleccion.Designer.cs">
+      <DependentUpon>Tela_Seleccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Diseño\Acabados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Diseño\Acabados.Designer.cs">
+      <DependentUpon>Acabados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Diseño\Acabados_control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Diseño\Acabados_control.Designer.cs">
+      <DependentUpon>Acabados_control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Diseño\Acabados_seleccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Diseño\Acabados_seleccion.Designer.cs">
+      <DependentUpon>Acabados_seleccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Diseño\Avios_seleccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Diseño\Avios_seleccion.Designer.cs">
+      <DependentUpon>Avios_seleccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Diseño\ClienteSeleccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Diseño\ClienteSeleccion.Designer.cs">
+      <DependentUpon>ClienteSeleccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Diseño\Corte_Vista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Diseño\Corte_Vista.Designer.cs">
+      <DependentUpon>Corte_Vista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Diseño\Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Diseño\Empleados.Designer.cs">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Diseño\Fichas_tecnicas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Diseño\Fichas_tecnicas.Designer.cs">
+      <DependentUpon>Fichas_tecnicas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Diseño\Fichas_tecnicas_control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Diseño\Fichas_tecnicas_control.Designer.cs">
+      <DependentUpon>Fichas_tecnicas_control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Diseño\Operaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Diseño\Operaciones.Designer.cs">
+      <DependentUpon>Operaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Diseño\Operaciones_control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Diseño\Operaciones_control.Designer.cs">
+      <DependentUpon>Operaciones_control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Diseño\Operaciones_seleccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Diseño\Operaciones_seleccion.Designer.cs">
+      <DependentUpon>Operaciones_seleccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Diseño\Ordenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Diseño\Ordenes.Designer.cs">
+      <DependentUpon>Ordenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Diseño\Piezas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Diseño\Piezas.Designer.cs">
+      <DependentUpon>Piezas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Diseño\Piezas_control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Diseño\Piezas_control.Designer.cs">
+      <DependentUpon>Piezas_control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Diseño\Piezas_seleccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Diseño\Piezas_seleccion.Designer.cs">
+      <DependentUpon>Piezas_seleccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Diseño\Plantillas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Diseño\Plantillas.Designer.cs">
+      <DependentUpon>Plantillas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Diseño\PlantillasControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Diseño\PlantillasControl.Designer.cs">
+      <DependentUpon>PlantillasControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Diseño\Prendas_acabados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Diseño\Prendas_acabados.Designer.cs">
+      <DependentUpon>Prendas_acabados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Diseño\Prendas_corte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Diseño\Prendas_corte.Designer.cs">
+      <DependentUpon>Prendas_corte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Diseño\Prendas_separado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Diseño\Prendas_separado.Designer.cs">
+      <DependentUpon>Prendas_separado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Diseño\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Diseño\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Diseño\Rutas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Diseño\Rutas.Designer.cs">
+      <DependentUpon>Rutas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Diseño\Separado_Vista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Diseño\Separado_Vista.Designer.cs">
+      <DependentUpon>Separado_Vista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Diseño\Solicitudes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Diseño\Solicitudes.Designer.cs">
+      <DependentUpon>Solicitudes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Diseño\Solicitudes_control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Diseño\Solicitudes_control.Designer.cs">
+      <DependentUpon>Solicitudes_control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Diseño\Telas_corte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Diseño\Telas_corte.Designer.cs">
+      <DependentUpon>Telas_corte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Diseño\Telas_orden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Diseño\Telas_orden.Designer.cs">
+      <DependentUpon>Telas_orden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Diseño\Ver_observaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Diseño\Ver_observaciones.Designer.cs">
+      <DependentUpon>Ver_observaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MonitorAlertas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MonitorAlertas.Designer.cs">
+      <DependentUpon>MonitorAlertas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PLANTILLAS\Avios_RPT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Avios_RPT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\PLANTILLAS\CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\PLANTILLAS\FichaTecnicaP1_RPT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FichaTecnicaP1_RPT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\PLANTILLAS\FichaTecnicaP2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FichaTecnicaP2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\PLANTILLAS\HojaCorte1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HojaCorte1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\PLANTILLAS\HojaCorte2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HojaCorte2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\PLANTILLAS\SalidaMaquila2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalidaMaquila2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\PLANTILLAS\SalidaMaquilaRPT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalidaMaquilaRPT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\PLANTILLAS\TelasBodegaVista_Almacen.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TelasBodegaVista_Almacen.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\PLANTILLAS\TelasBodegaVista_porCliente.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TelasBodegaVista_porCliente.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\PLANTILLAS\TelasBodegaVista_porNombre.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TelasBodegaVista_porNombre.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\PLANTILLAS\TelasBodegaVista_Proveedor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TelasBodegaVista_Proveedor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\PLANTILLAS\Telas_RPT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Telas_RPT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\PLANTILLAS\TrabajoSeparadoHojaCorte.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrabajoSeparadoHojaCorte.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\PLANTILLAS\VistaBodegaAvios_Catalogo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VistaBodegaAvios_Catalogo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\PLANTILLAS\VistaBodegaAvios_Faltantes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VistaBodegaAvios_Faltantes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\PLANTILLAS\VistaBodegaAvios_PorTipo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VistaBodegaAvios_PorTipo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\PLANTILLAS\Vistabodega_Avios.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vistabodega_Avios.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Recepcion\Agregar_Tallas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Recepcion\Agregar_Tallas.Designer.cs">
+      <DependentUpon>Agregar_Tallas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Recepcion\Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Recepcion\Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Recepcion\ClientesControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Recepcion\ClientesControl.Designer.cs">
+      <DependentUpon>ClientesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Recepcion\Costeo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Recepcion\Costeo.Designer.cs">
+      <DependentUpon>Costeo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Recepcion\CosteoControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Recepcion\CosteoControl.Designer.cs">
+      <DependentUpon>CosteoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Recepcion\Cotizacion_Fichas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Recepcion\Cotizacion_Fichas.Designer.cs">
+      <DependentUpon>Cotizacion_Fichas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Recepcion\Ficha_busqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Recepcion\Ficha_busqueda.Designer.cs">
+      <DependentUpon>Ficha_busqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Recepcion\Orden_Produccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Recepcion\Orden_Produccion.Designer.cs">
+      <DependentUpon>Orden_Produccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Recepcion\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Recepcion\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Recepcion\Seleccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Recepcion\Seleccion.Designer.cs">
+      <DependentUpon>Seleccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Recepcion\SeleccionarTela.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Recepcion\SeleccionarTela.Designer.cs">
+      <DependentUpon>SeleccionarTela.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Recepcion\Seleccionar_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Recepcion\Seleccionar_Cliente.Designer.cs">
+      <DependentUpon>Seleccionar_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Recepcion\Seleccionar_ClienteOrden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Recepcion\Seleccionar_ClienteOrden.Designer.cs">
+      <DependentUpon>Seleccionar_ClienteOrden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Recepcion\Solicitud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Recepcion\Solicitud.Designer.cs">
+      <DependentUpon>Solicitud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Recepcion\SolicitudControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Recepcion\SolicitudControl.Designer.cs">
+      <DependentUpon>SolicitudControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Recepcion\Telas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Recepcion\Telas.Designer.cs">
+      <DependentUpon>Telas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Recepcion\TelasControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Recepcion\TelasControl.Designer.cs">
+      <DependentUpon>TelasControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\REPORTES\AviosProduccionImprimir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\REPORTES\AviosProduccionImprimir.Designer.cs">
+      <DependentUpon>AviosProduccionImprimir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\REPORTES\FichaTecnicaPagina1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\REPORTES\FichaTecnicaPagina1.Designer.cs">
+      <DependentUpon>FichaTecnicaPagina1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\REPORTES\FichaTecnicaPagina2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\REPORTES\FichaTecnicaPagina2.Designer.cs">
+      <DependentUpon>FichaTecnicaPagina2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\REPORTES\HojaCorte1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\REPORTES\HojaCorte1.Designer.cs">
+      <DependentUpon>HojaCorte1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\REPORTES\HojaCorte2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\REPORTES\HojaCorte2.Designer.cs">
+      <DependentUpon>HojaCorte2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\REPORTES\ImpresionBodegaAvios_Catalogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\REPORTES\ImpresionBodegaAvios_Catalogo.Designer.cs">
+      <DependentUpon>ImpresionBodegaAvios_Catalogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\REPORTES\ImpresionBodegaAvios_Faltantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\REPORTES\ImpresionBodegaAvios_Faltantes.Designer.cs">
+      <DependentUpon>ImpresionBodegaAvios_Faltantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\REPORTES\ImpresionBodegaAvios_PorTipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\REPORTES\ImpresionBodegaAvios_PorTipo.Designer.cs">
+      <DependentUpon>ImpresionBodegaAvios_PorTipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\REPORTES\ImpresionBodegaDeavios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\REPORTES\ImpresionBodegaDeavios.Designer.cs">
+      <DependentUpon>ImpresionBodegaDeavios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\REPORTES\Pruebatallas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\REPORTES\Pruebatallas.Designer.cs">
+      <DependentUpon>Pruebatallas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\REPORTES\SalidaMaquilaHoja2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\REPORTES\SalidaMaquilaHoja2.Designer.cs">
+      <DependentUpon>SalidaMaquilaHoja2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\REPORTES\SeparadoTrabajoImpresion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\REPORTES\SeparadoTrabajoImpresion.Designer.cs">
+      <DependentUpon>SeparadoTrabajoImpresion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\REPORTES\TelasBodegaVistas_Almacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\REPORTES\TelasBodegaVistas_Almacen.Designer.cs">
+      <DependentUpon>TelasBodegaVistas_Almacen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\REPORTES\TelasBodegaVista_porCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\REPORTES\TelasBodegaVista_porCliente.Designer.cs">
+      <DependentUpon>TelasBodegaVista_porCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\REPORTES\TelasBodegaVista_porNombre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\REPORTES\TelasBodegaVista_porNombre.Designer.cs">
+      <DependentUpon>TelasBodegaVista_porNombre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\REPORTES\TelasBodegaVista_Proveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\REPORTES\TelasBodegaVista_Proveedor.Designer.cs">
+      <DependentUpon>TelasBodegaVista_Proveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\REPORTES\TelasProduccionImprimir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\REPORTES\TelasProduccionImprimir.Designer.cs">
+      <DependentUpon>TelasProduccionImprimir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Bodega\AsignacionEmpleadosCostura.resx">
+      <DependentUpon>AsignacionEmpleadosCostura.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Bodega\Avios.resx">
+      <DependentUpon>Avios.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Bodega\AviosColorGrupos.resx">
+      <DependentUpon>AviosColorGrupos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Bodega\AviosControl.resx">
+      <DependentUpon>AviosControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Bodega\Avios_Asignacion.resx">
+      <DependentUpon>Avios_Asignacion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Bodega\Avios_captura.resx">
+      <DependentUpon>Avios_captura.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Bodega\Avios_Entrada.resx">
+      <DependentUpon>Avios_Entrada.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Bodega\Cliente_seleccion.resx">
+      <DependentUpon>Cliente_seleccion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Bodega\Entrada_maquila.resx">
+      <DependentUpon>Entrada_maquila.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Bodega\Hoja_Acabados.resx">
+      <DependentUpon>Hoja_Acabados.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Bodega\Hoja_Corte.resx">
+      <DependentUpon>Hoja_Corte.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Bodega\Maquiladores.resx">
+      <DependentUpon>Maquiladores.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Bodega\Maquiladores_control.resx">
+      <DependentUpon>Maquiladores_control.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Bodega\Ordenes.resx">
+      <DependentUpon>Ordenes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Bodega\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Bodega\Proveedores.resx">
+      <DependentUpon>Proveedores.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Bodega\ProveedoresControl.resx">
+      <DependentUpon>ProveedoresControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Bodega\Proveedor_Seleccion.resx">
+      <DependentUpon>Proveedor_Seleccion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Bodega\Salida_maquila.resx">
+      <DependentUpon>Salida_maquila.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Bodega\SeleccionarEmpleado.resx">
+      <DependentUpon>SeleccionarEmpleado.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Bodega\Seleccionar_entrada.resx">
+      <DependentUpon>Seleccionar_entrada.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Bodega\Seleccionar_Maquilador.resx">
+      <DependentUpon>Seleccionar_Maquilador.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Bodega\Seleccionar_Orden.resx">
+      <DependentUpon>Seleccionar_Orden.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Bodega\Seleccionar_salida.resx">
+      <DependentUpon>Seleccionar_salida.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Bodega\Seleccion_Entregas.resx">
+      <DependentUpon>Seleccion_Entregas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Bodega\Telas.resx">
+      <DependentUpon>Telas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Bodega\TelasControl.resx">
+      <DependentUpon>TelasControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Bodega\Telas_Captura.resx">
+      <DependentUpon>Telas_Captura.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Bodega\Telas_Entrada.resx">
+      <DependentUpon>Telas_Entrada.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Bodega\Telas_orden.resx">
+      <DependentUpon>Telas_orden.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Bodega\Tela_Seleccion.resx">
+      <DependentUpon>Tela_Seleccion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Diseño\Acabados.resx">
+      <DependentUpon>Acabados.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Diseño\Acabados_control.resx">
+      <DependentUpon>Acabados_control.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Diseño\Acabados_seleccion.resx">
+      <DependentUpon>Acabados_seleccion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Diseño\Avios_seleccion.resx">
+      <DependentUpon>Avios_seleccion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Diseño\ClienteSeleccion.resx">
+      <DependentUpon>ClienteSeleccion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Diseño\Corte_Vista.resx">
+      <DependentUpon>Corte_Vista.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Diseño\Empleados.resx">
+      <DependentUpon>Empleados.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Diseño\Fichas_tecnicas.resx">
+      <DependentUpon>Fichas_tecnicas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Diseño\Fichas_tecnicas_control.resx">
+      <DependentUpon>Fichas_tecnicas_control.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Diseño\Operaciones.resx">
+      <DependentUpon>Operaciones.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Diseño\Operaciones_control.resx">
+      <DependentUpon>Operaciones_control.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Diseño\Operaciones_seleccion.resx">
+      <DependentUpon>Operaciones_seleccion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Diseño\Ordenes.resx">
+      <DependentUpon>Ordenes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Diseño\Piezas.resx">
+      <DependentUpon>Piezas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Diseño\Piezas_control.resx">
+      <DependentUpon>Piezas_control.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Diseño\Piezas_seleccion.resx">
+      <DependentUpon>Piezas_seleccion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Diseño\Plantillas.resx">
+      <DependentUpon>Plantillas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Diseño\PlantillasControl.resx">
+      <DependentUpon>PlantillasControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Diseño\Prendas_acabados.resx">
+      <DependentUpon>Prendas_acabados.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Diseño\Prendas_corte.resx">
+      <DependentUpon>Prendas_corte.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Diseño\Prendas_separado.resx">
+      <DependentUpon>Prendas_separado.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Diseño\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Diseño\Rutas.resx">
+      <DependentUpon>Rutas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Diseño\Separado_Vista.resx">
+      <DependentUpon>Separado_Vista.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Diseño\Solicitudes.resx">
+      <DependentUpon>Solicitudes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Diseño\Solicitudes_control.resx">
+      <DependentUpon>Solicitudes_control.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Diseño\Telas_corte.resx">
+      <DependentUpon>Telas_corte.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Diseño\Telas_orden.resx">
+      <DependentUpon>Telas_orden.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Diseño\Ver_observaciones.resx">
+      <DependentUpon>Ver_observaciones.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MonitorAlertas.resx">
+      <DependentUpon>MonitorAlertas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PLANTILLAS\Avios_RPT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Avios_RPT.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PLANTILLAS\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PLANTILLAS\FichaTecnicaP1_RPT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FichaTecnicaP1_RPT.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PLANTILLAS\FichaTecnicaP2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FichaTecnicaP2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PLANTILLAS\HojaCorte1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HojaCorte1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PLANTILLAS\HojaCorte2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HojaCorte2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PLANTILLAS\Report1.rdlc" />
+    <EmbeddedResource Include="GUI\PLANTILLAS\SalidaMaquila2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalidaMaquila2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PLANTILLAS\SalidaMaquilaRPT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalidaMaquilaRPT.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PLANTILLAS\TelasBodegaVista_Almacen.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TelasBodegaVista_Almacen.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PLANTILLAS\TelasBodegaVista_porCliente.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TelasBodegaVista_porCliente.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PLANTILLAS\TelasBodegaVista_porNombre.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TelasBodegaVista_porNombre.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PLANTILLAS\TelasBodegaVista_Proveedor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TelasBodegaVista_Proveedor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PLANTILLAS\Telas_RPT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Telas_RPT.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PLANTILLAS\TrabajoSeparadoHojaCorte.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TrabajoSeparadoHojaCorte.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PLANTILLAS\VistaBodegaAvios_Catalogo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>VistaBodegaAvios_Catalogo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PLANTILLAS\VistaBodegaAvios_Faltantes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>VistaBodegaAvios_Faltantes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PLANTILLAS\VistaBodegaAvios_PorTipo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>VistaBodegaAvios_PorTipo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PLANTILLAS\Vistabodega_Avios.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Vistabodega_Avios.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Recepcion\Agregar_Tallas.resx">
+      <DependentUpon>Agregar_Tallas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Recepcion\Clientes.resx">
+      <DependentUpon>Clientes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Recepcion\ClientesControl.resx">
+      <DependentUpon>ClientesControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Recepcion\Costeo.resx">
+      <DependentUpon>Costeo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Recepcion\CosteoControl.resx">
+      <DependentUpon>CosteoControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Recepcion\Cotizacion_Fichas.resx">
+      <DependentUpon>Cotizacion_Fichas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Recepcion\Ficha_busqueda.resx">
+      <DependentUpon>Ficha_busqueda.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Recepcion\Orden_Produccion.resx">
+      <DependentUpon>Orden_Produccion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Recepcion\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Recepcion\Seleccion.resx">
+      <DependentUpon>Seleccion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Recepcion\SeleccionarTela.resx">
+      <DependentUpon>SeleccionarTela.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Recepcion\Seleccionar_Cliente.resx">
+      <DependentUpon>Seleccionar_Cliente.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Recepcion\Seleccionar_ClienteOrden.resx">
+      <DependentUpon>Seleccionar_ClienteOrden.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Recepcion\Solicitud.resx">
+      <DependentUpon>Solicitud.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Recepcion\SolicitudControl.resx">
+      <DependentUpon>SolicitudControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Recepcion\Telas.resx">
+      <DependentUpon>Telas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Recepcion\TelasControl.resx">
+      <DependentUpon>TelasControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\REPORTES\AviosProduccionImprimir.resx">
+      <DependentUpon>AviosProduccionImprimir.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\REPORTES\FichaTecnicaPagina1.resx">
+      <DependentUpon>FichaTecnicaPagina1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\REPORTES\FichaTecnicaPagina2.resx">
+      <DependentUpon>FichaTecnicaPagina2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\REPORTES\HojaCorte1.resx">
+      <DependentUpon>HojaCorte1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\REPORTES\HojaCorte2.resx">
+      <DependentUpon>HojaCorte2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\REPORTES\ImpresionBodegaAvios_Catalogo.resx">
+      <DependentUpon>ImpresionBodegaAvios_Catalogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\REPORTES\ImpresionBodegaAvios_Faltantes.resx">
+      <DependentUpon>ImpresionBodegaAvios_Faltantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\REPORTES\ImpresionBodegaAvios_PorTipo.resx">
+      <DependentUpon>ImpresionBodegaAvios_PorTipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\REPORTES\ImpresionBodegaDeavios.resx">
+      <DependentUpon>ImpresionBodegaDeavios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\REPORTES\Pruebatallas.resx">
+      <DependentUpon>Pruebatallas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\REPORTES\SalidaMaquilaHoja2.resx">
+      <DependentUpon>SalidaMaquilaHoja2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\REPORTES\SeparadoTrabajoImpresion.resx">
+      <DependentUpon>SeparadoTrabajoImpresion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\REPORTES\TelasBodegaVistas_Almacen.resx">
+      <DependentUpon>TelasBodegaVistas_Almacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\REPORTES\TelasBodegaVista_porCliente.resx">
+      <DependentUpon>TelasBodegaVista_porCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\REPORTES\TelasBodegaVista_porNombre.resx">
+      <DependentUpon>TelasBodegaVista_porNombre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\REPORTES\TelasBodegaVista_Proveedor.resx">
+      <DependentUpon>TelasBodegaVista_Proveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\REPORTES\TelasProduccionImprimir.resx">
+      <DependentUpon>TelasProduccionImprimir.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BO\DS_MasterDataset.xsc">
+      <DependentUpon>DS_MasterDataset.xsd</DependentUpon>
+    </None>
+    <None Include="BO\DS_MasterDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_MasterDataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BO\DS_MasterDataset.xss">
+      <DependentUpon>DS_MasterDataset.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\GrupoSM_Recepcion.BO.DS_OrdenProduccionTableAdapters.datos_orden_reporteCompletoTableAdapter.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5 SP2</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ico45.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
